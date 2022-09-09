@@ -10,35 +10,37 @@
 	
 	<body>
 		<header>
-			<h2>Registro de activos</h2>
+			<h2>Crear nuevo registro</h2>
 		</header>
 		<main>
+		
+			<section class="registro">
+				<form>
+				
+					<label for="nombre_maquina">Nombre de la maquina: </label>
+					<input type="text" id="nombre_maquina" />
+					<br />
+					
+					<label for="marca">Marca</label>
+					<input type="text" id="marca" />
+					<br />
+					
+					<label for="modelo">Modelo: </label>
+					<input type="text" id="modelo" />
+					<br />
+					
+					<label for="ubicacion">serial: </label>
+					<input type="text" id="Ubicacion" />
+					<br />
+									
+					<label for="Estatus">Estatus: </label>
+					<input type="text" id="Estatus" />
+					<br />
+					<button type="submit">Registrar</button>
+				</form>
+
+			</section>
 			
-			<form>
-				
-				<label for="nombre_maquina">NOMBRE DE LA MAQUINA: </label>
-				<input type="text" id="NOMBRE DE LA MAQUINA" />
-				<br />
-				
-				<label for="MODELO">MODELO</label>
-				<input type="text" id="MODELO" />
-				<br />
-				
-				<label for="tipo">TIPO: </label>
-				<input type="text" id="tipo" />
-				<br />
-				
-				<label for="serial">SERIAL: </label>
-				<input type="text" id="serial" />
-				<br />
-				
-				<!--Observación-->
-				<label for="observacion">Observación: </label>
-				<br />
-				<textarea id="observacion" rows="10" cols="80"></textarea>
-				<br />
-				<button type="submit">Registrar</button>
-			</form>
 		</main>
 		<footer></footer>
 	</body>
