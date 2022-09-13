@@ -49,7 +49,7 @@ public class SoftgebControlador {
     public List<String> getByLastname(String nombre_equipo) throws Exception {
         Session session = factory.openSession();
         session.beginTransaction();
-        List<Softgeb> objSoftgeb = session.createQuery("from Softgeb where nombre_del_equipo = :ap", Softgeb.class)
+        List<Softgeb> objSoftgeb = session.createQuery("from Softgeb where nombre_equipo = :ap", Softgeb.class)
         .setParameter("ap", nombre_equipo).list();
         session.close();
         return objToString(objSoftgeb);
