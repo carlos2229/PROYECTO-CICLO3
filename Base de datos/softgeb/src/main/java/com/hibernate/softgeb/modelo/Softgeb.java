@@ -10,7 +10,7 @@ public class Softgeb {
     
     // ATRIBUTOS
     @Id
-    private  int id;
+    private int id;
     private String nombre_equipo;
     private String marca;
     //@Column(name="tipo_mascota")
@@ -78,11 +78,6 @@ public class Softgeb {
 
     // MODIFICADORES // SETTERS
 
-    
-    public void setObservacion(String observacion) {
-        this.observacion = observacion;
-    }
-
     public void setNombre_equipo(String nombre_equipo) {
         this.nombre_equipo = nombre_equipo;
     }
@@ -103,6 +98,9 @@ public class Softgeb {
         this.estatus = estatus;
     }
 
-    
-        
+    public void setObservacion(String observacion) {
+        this.observacion = observacion;
+    }
+
+             
 }

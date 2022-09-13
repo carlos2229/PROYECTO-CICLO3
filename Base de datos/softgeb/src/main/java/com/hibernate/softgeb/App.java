@@ -1,13 +1,11 @@
 package com.hibernate.softgeb;
 
-/**
- * Hello world!
- *
- */
+import com.hibernate.softgeb.vista.SoftgebVista;
+
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    public static void main( String[] args ) {
+        SoftgebVista vista = new SoftgebVista();
+        vista.menu();
     }
 }

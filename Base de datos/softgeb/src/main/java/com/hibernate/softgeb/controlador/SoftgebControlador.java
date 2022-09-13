@@ -47,14 +47,13 @@ public class SoftgebControlador {
     }
 
     public List<String> getByLastname(String nombre_equipo) throws Exception {
-        //List<String> mascotas = new ArrayList<>();
         Session session = factory.openSession();
         session.beginTransaction();
         List<Softgeb> objSoftgeb = session.createQuery("from Softgeb where nombre_del_equipo = :ap", Softgeb.class)
         .setParameter("ap", nombre_equipo).list();
         session.close();
         return objToString(objSoftgeb);
-        //return mascotas;
+        
     }
 
     public List<String> objToString(List<Softgeb> objSoftgebs) {
