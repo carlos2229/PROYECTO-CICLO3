@@ -1,40 +1,21 @@
-.header {
-	text-align: center;
-	margin-top: 30px;
-	margin-left: 120px;
-	padding: 20px;
-	width: 80%;
-	height: 50%;
-	background-color: rgb(171, 197, 214);
+
+
+body{
+
+}
+
+header{	
+	margin-top: 20px;
 }
 
 h1{
-	color: rgb(54, 96, 151);
+	margin-right: 20px;
+	text-align: right;
 }
 
-/*Estilo para el formulario*/
-#email {
-	text-align: center;
-	color:#333333;
-	background-color: rgb(171, 197, 214);
-	margin-bottom: 20px;
-	margin-left: 120px;
-	width: 80%;
-	height: 300px;
-	border-top: 5px solid white;
-	padding-top: 20px;
 
-}
 
-#section-form {
-	
-	padding-top: 50px;
-}
 
-#cont-btn {
-	display: flex;
-	justify-content: center;
-}
 
 
 
