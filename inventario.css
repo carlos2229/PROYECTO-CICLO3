@@ -1,0 +1,34 @@
+
+.fondo{
+    background-color: #638cd8;
+}
+
+.fila{
+    border: 2px solid rgb(51, 1, 1);
+    background-color: red;
+    margin-bottom: 15px;
+}
+
+.navegardor{
+    border: 2px solid rgb(31, 68, 0);
+    background-color: rgb(115, 255, 0);
+    margin-bottom: 15px;
+}
+
+.buscar_tabla{
+    border: 2px solid lightslategray;
+    background-color: darkslategray;
+    margin-bottom: 15px;
+}
+
+.buscar{
+    border: 2px solid rgb(71, 87, 1);
+    background-color: rgb(208, 255, 0);
+    margin-bottom: 15px;
+}
+
+.tabla{
+    border: 2px solid rgb(10, 1, 63);
+    background-color: rgb(38, 0, 255);
+    margin-bottom: 15px;
+}
