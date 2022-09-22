@@ -1,5 +1,8 @@
+#main{
+    margin-top: 10px;
+}
 
-.fondo{
+.body{
     background-color: #638cd8;
 }
 
@@ -9,16 +12,10 @@
     margin-bottom: 15px;
 }
 
-.navegardor{
-    border: 2px solid rgb(31, 68, 0);
-    background-color: rgb(115, 255, 0);
-    margin-bottom: 15px;
-}
-
 .buscar_tabla{
     border: 2px solid lightslategray;
     background-color: darkslategray;
-    margin-bottom: 15px;
+    height: 500px;
 }
 
 .buscar{
@@ -32,3 +29,40 @@
     background-color: rgb(38, 0, 255);
     margin-bottom: 15px;
 }
+
+.sidebar {
+    position: fixed;
+    width: 25%;
+    height: 100vh;
+    background: #e0e3e7;
+    font-size: 0.65em;
+  }
+
+  .nav {
+    margin-left: 50px;
+    font-weight: bold;
+  }
+
+  .nav ul {
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    margin: 3.2em 0;
+  }
+
+  a {
+    line-height: 5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    color: rgba(#FFF, 0.35);
+    display: block;
+    transition: all ease-out 300ms;
+    }
+
+    .logo{
+        margin-left: 80px;
+        margin-top: 20px;         
+    }
