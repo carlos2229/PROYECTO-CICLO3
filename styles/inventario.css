@@ -1,68 +1,48 @@
-#main{
-    margin-top: 10px;
-}
 
 .body{
     background-color: #638cd8;
 }
 
-.fila{
-    border: 2px solid rgb(51, 1, 1);
-    background-color: red;
-    margin-bottom: 15px;
-}
 
-.buscar_tabla{
-    border: 2px solid lightslategray;
-    background-color: darkslategray;
-    height: 500px;
-}
-
-.buscar{
-    border: 2px solid rgb(71, 87, 1);
-    background-color: rgb(208, 255, 0);
-    margin-bottom: 15px;
-}
-
-.tabla{
-    border: 2px solid rgb(10, 1, 63);
-    background-color: rgb(38, 0, 255);
-    margin-bottom: 15px;
-}
-
-.sidebar {
+/*.sidebar {
     position: fixed;
-    width: 25%;
+    width: 14%;
     height: 100vh;
     background: #e0e3e7;
     font-size: 0.65em;
   }
 
-  .nav {
-    margin-left: 50px;
-    font-weight: bold;
-  }
+ 
 
   .nav ul {
     list-style: none;
   }
 
   li {
-    position: relative;
-    margin: 3.2em 0;
+    position:static;
+    margin: 1.2em 0;
+    background-color: black;
   }
 
   a {
     line-height: 5em;
     text-transform: uppercase;
-    text-decoration: none;
     letter-spacing: 0.4em;
-    color: rgba(#FFF, 0.35);
-    display: block;
-    transition: all ease-out 300ms;
-    }
+    }*/
 
-    .logo{
-        margin-left: 80px;
-        margin-top: 20px;         
-    }
+  .nav-item{
+    width: 180px;
+    text-align: center;
+  }
+
+  .navbar{
+    width: 15%;
+    height: 100vh;
+  }
+
+  .navbar-brand{
+    margin-left: 5%;
+    margin-bottom: 30px;
+  }
+
+ 
