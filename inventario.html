@@ -21,21 +21,49 @@
 
 </head>
 
-<body class="body">
-    <nav class="navbar flex-column d-flex navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand">
-			<img src="./img/Logo Softgeb.png" class="img-fluid" alt="...">
-		</a>
+<body class="body">		
+	<div class="sidebar">
+		<div class="logo_content">
+			<img src="./img/Logo Softgeb.png" class="img-fluid" alt="logo de Softgeb">	
+		</div>
+
 		<ul class="nav nav-pills flex-column">
 			<li class="nav-item">
-			  <a class="nav-link active" aria-current="page" href="#">Inventario</a>
+			    <a class="nav-link active" aria-current="page" href="#">Inventario</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Tablero</a>
+		        <a class="nav-link" href="#">Tablero</a>
 			</li>
-		  </ul>
+	    </ul>
+	</div>
+
+	<main>
+		<nav class="navbar rounded bg-light">
+				<div class="container">
+				  <form class="d-flex" role="search">
+					<div class="form row">
+						<div class="col-lg-6 border">
+							<label>Nombre del equipo</label>
+							<input class="form-control me-2" type="search" placeholder="Ingresa el nombre del equipo" aria-label="Search">
+						</div>
+						<div class="col-lg-6 border">
+							<button class="btn btn-outline-primary" type="submit">Buscar</button>
+						</div>
+					</div>
+					
+				  </form>
+				</div>
+		</nav>
 		
-	</nav>
+
+		<div class="caja_2">
+			<h2>TABLA</h2>
+		</div>
+	</main>
+	
+		
+		
+	
 
     
 </body>
