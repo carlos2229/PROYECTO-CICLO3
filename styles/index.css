@@ -1,35 +1,5 @@
-h2 {
-	text-align: center;
-	margin-top: 50px;
+section{
+	font-family: 'Dosis', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;	
 }
 
-#sectionLogin{
-	display: grid;
-	grid-template-columns: auto;
-	grid-area: auto;
-	text-align: center;
-	padding: 0%;
-	background-color: rgba(150, 20, 20, 0.5);
-	margin: 20%;
-}
-
-/*Estilo para el formulario*/
-#section-form form {
-	width: 350px;
-}
-
-section form label {
-	align-items: flex-start;
-	background-color: aqua;
-}
-
-#section-form {
-	display: flex;
-	justify-content: center;
-	padding-top: 50px;
-}
-
-#cont-btn {
-	display: flex;
-	justify-content: center;
-}
