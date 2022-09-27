@@ -21,50 +21,45 @@
 
 </head>
 
-<body class="body">		
-	<div class="sidebar">
-		<div class="logo_content">
-			<img src="./img/Logo Softgeb.png" class="img-fluid" alt="logo de Softgeb">	
-		</div>
+<body class="body">	
 
-		<ul class="nav nav-pills flex-column">
-			<li class="nav-item">
-			    <a class="nav-link active" aria-current="page" href="#">Inventario</a>
-			</li>
-			<li class="nav-item">
-		        <a class="nav-link" href="#">Tablero</a>
-			</li>
-	    </ul>
-	</div>
-
-	<main>
-		<nav class="navbar rounded bg-light">
-				<div class="container border">
-				  <form class="d-flex" role="search">
-					<div class="row border">
-						<div class="col-lg-6 border">
-							<label>Nombre del equipo</label>
-							<input class="form-control me-2" type="search" placeholder="Ingresa el nombre del equipo" aria-label="Search">
-						</div>
-						<div class="col-lg-6 border">
-							<button class="btn btn-outline-primary" type="submit">Buscar</button>
-						</div>
-					</div>
-					
-				  </form>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-2 sidebar">
+				<div class="logo_content">
+					<img src="./img/Logo Softgeb.png" class="img-fluid" alt="logo de Softgeb">	
 				</div>
-		</nav>
-		
-
-		<div class="caja_2">
-			<h2>TABLA</h2>
+				<hr>
+				<ul class="nav nav-pills flex-column">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Inventario</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Tablero</a>
+					</li>
+				</ul>
+			</div>
+			<main class="ms-lg-auto col-lg-10">		
+					<nav class="navbar rounded m-5 bg-light">
+						<div class="container d-flex">
+							<div class="flex-fill">
+								<input class="form-control" type="search" placeholder="Ingrese el nombre del equipo" aria-label="Search">
+							</div>
+							<div class="m-2">
+								<button class="btn btn-outline-primary" type="submit">Buscar</button>
+							</div>				
+						</div>
+					</nav>
+							
+				<div class="caja_2">
+							<h2>TABLA</h2>
+							
+				</div>
+			</main>
 		</div>
-	</main>
-	
-		
-		
-	
+	</div>	
 
-    
+   
 </body>
 </html>
