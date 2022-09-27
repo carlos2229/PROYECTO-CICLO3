@@ -6,6 +6,7 @@
     <property name="connection.url">jdbc:mysql://localhost/softgeb</property>
     <property name="connection.username">root</property>
     <property name="connection.password">misiontic</property>
+    <property name="connection.password">misiontic</property>
     <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
     <property name="hibernate.show_sql">true</property>
   </session-factory>
