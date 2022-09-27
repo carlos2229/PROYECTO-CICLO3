@@ -1,0 +1,17 @@
+.body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #638cd8;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 180px;
+    background-color: #d2def5;
+    padding: 6px 14px;
+}

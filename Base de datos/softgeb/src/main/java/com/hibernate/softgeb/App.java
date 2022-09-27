@@ -1,11 +1,13 @@
 package com.hibernate.softgeb;
 
-import com.hibernate.softgeb.vista.SoftgebVista;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+@SpringBootApplication
 public class App 
 {
     public static void main( String[] args ) {
-        SoftgebVista vista = new SoftgebVista();
-        vista.menu();
+        SpringApplication.run(App.class, args );
     }
 }
