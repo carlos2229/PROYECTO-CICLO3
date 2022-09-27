@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="softgeb")
+@Table(name="Softgeb")
 public class Softgeb {
     
     // ATRIBUTOS
@@ -101,6 +101,4 @@ public class Softgeb {
     public void setObservacion(String observacion) {
         this.observacion = observacion;
     }
-
-             
 }
