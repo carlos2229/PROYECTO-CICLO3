@@ -1,0 +1,34 @@
+.body{      
+    background-color: #638cd8;
+}
+
+main{
+    height: 100vh;
+}
+
+.flex-sidebar {
+    width: 14%;
+}
+
+.flex-content{
+    width: 80%;
+}
+
+.card-box{
+    width: 200px;
+}
+
+.flex-box{
+    width: 200px;
+    height: 200px;
+}
+
+.sidebar{
+    background-color: #d2def5;
+    padding: 6px 14px;
+    text-align: center;
+}
+
+.nav{
+    height: 50%;
+}
