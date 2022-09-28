@@ -5,6 +5,8 @@
   width: 100%;
   overflow: hidden;
   background-color: #638cd8;
+  font-family: 'Dosis', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 .sidebar{
@@ -37,7 +39,7 @@
 }
 
 .tbody{
-  font-size:x-small;
+  font-size:small;
 }
 
 .table-fixed thead,
