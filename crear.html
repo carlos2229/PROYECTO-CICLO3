@@ -46,34 +46,40 @@
 						<a class="btn btn-primary" href="./index.html" role="button">SALIR</a>
 					</div>
 				</div>
-				<div class="flex-form align-self-center m-auto p-5 bg-gradient">
-					<div class="mb-2">
-						<label for="nombre_equipo" class="form-label">Nombre del equipo</label>
-						<input type="text" class="form-control" id="nombre_equipo">
+				<form onsubmit="get_data_form(event)" class="flex-form m-auto bg-gradient">
+					<div  class="align-self-center p-5 ">
+						<div class="mb-2">
+							<label for="nombre_equipo" class="form-label">Nombre del equipo</label>
+							<input name="nombre_equipo" type="text" class="form-control" id="nombre_equipo">
+						</div>
+						<div class="mb-2">
+							<label for="marca" class="form-label">Marca</label>
+							<input name="marca" type="text" class="form-control" id="marca">
+						</div>
+						<div class="mb-2">
+							<label for="modelo" class="form-label">Modelo</label>
+							<input name="modelo" type="text" class="form-control" id="modelo">
+						</div>
+						<div class="mb-2">
+							<label for="ubicacion" class="form-label">Ubicaión</label>
+							<input name="ubicacion" type="text" class="form-control" id="ubicacion">
+						</div>
+						<label for="estatus" class="form-label">Estatus</label>
+						<select name="estatus" class="form-select" multiple >
+							<option value="Funcional">1. Funcional</option>
+							<option value="Fuera de servicio">2. Fuera de servicio</option>
+							<option value="En mantenimiento">3. En mantenimiento</option>
+							<option value="De baja">4. De baja</option>
+						</select>
+						<div class="mt-4">
+							<button type="submit" class="btn btn-primary">Crear</button>
+						</div>
 					</div>
-					<div class="mb-2">
-						<label for="marca" class="form-label">Marca</label>
-						<input type="text" class="form-control" id="marca">
-					</div>
-					<div class="mb-2">
-						<label for="modelo" class="form-label">Modelo</label>
-						<input type="text" class="form-control" id="modelo">
-					</div>
-					<div class="mb-2">
-						<label for="ubicacion" class="form-label">Ubicaión</label>
-						<input type="text" class="form-control" id="ubicacion">
-					</div>
-					<label for="estatus" class="form-label">Estatus</label>
-					<select class="form-select" multiple >
-						<option value="1">1. Funcional</option>
-						<option value="2">2. Fuera de servicio</option>
-						<option value="3">3. En mantenimiento</option>
-						<option value="3">4. De baja</option>
-					</select>
-					<div class="pt-2">
-						<button class="btn btn-primary">Crear</button>
-					</div>
-				</div>
+				</form>
+				
 		</main>
+
+		<!--Cargar scripts-->
+		<script src="./scripts/crear.js"></script>
 	</body>
 </html>

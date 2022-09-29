@@ -17,7 +17,6 @@ public class Softgeb {
     private String modelo;
     private String ubicacion;
     private String estatus;
-    private String observacion;
     
     // CONSTRUCTORES
     public Softgeb(){}
@@ -28,7 +27,6 @@ public class Softgeb {
         this.modelo = modelo;
         this.ubicacion = ubicacion;
         this.estatus = estatus;
-        this.observacion = observacion;
     }
 
     @Override
@@ -40,9 +38,7 @@ public class Softgeb {
         info += "\nModelo del equipo: "+modelo;
         info += "\nUbicacion: "+ubicacion;
         info += "\nEstatus del equipo: "+estatus;
-        info += "\nObservaciones: "+observacion;
         info += "\n------------------------------\n";
-
         return info;
     }
 
@@ -72,10 +68,6 @@ public class Softgeb {
         return estatus;
     }
 
-    public String getObservacion() {
-        return observacion;
-    }
-
     // MODIFICADORES // SETTERS
 
     public void setNombre_equipo(String nombre_equipo) {
@@ -98,7 +90,4 @@ public class Softgeb {
         this.estatus = estatus;
     }
 
-    public void setObservacion(String observacion) {
-        this.observacion = observacion;
-    }
 }
