@@ -2,52 +2,63 @@ package com.hibernate.softgeb.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Softgeb")
+@Table(name = "Softgeb")
 public class Softgeb {
-    
+
     // ATRIBUTOS
     @Id
     private int id;
     private String nombre_equipo;
     private String marca;
-    //@Column(name="tipo_mascota")
+    // @Column(name="tipo_mascota")
     private String modelo;
-    private String ubicacion;
-    private String estatus;
-    private String observacion;
-    
-    // CONSTRUCTORES
-    public Softgeb(){}
 
-    public Softgeb(String nombre_equipo, String marca, String modelo, String ubicacion, String estatus, String observacion) {
-        this.nombre_equipo = nombre_equipo;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.ubicacion = ubicacion;
-        this.estatus = estatus;
-        this.observacion = observacion;
-    }
+    @JoinColumn(name = "id_ubicacion")
+    @ManyToOne
+    private Ubicacion ubicacion;
+
+    @JoinColumn(name = "id_estatus")
+    @OneToOne
+    private Estatus estatus;
+
+    // CONSTRUCTORES
 
     @Override
     public String toString() {
         String info = "------------------------------\n";
-        info += "Id: "+id;
-        info += "\nNombre del equipo: "+nombre_equipo;
-        info += "\nMarca del equipo: "+marca;
-        info += "\nModelo del equipo: "+modelo;
-        info += "\nUbicacion: "+ubicacion;
-        info += "\nEstatus del equipo: "+estatus;
-        info += "\nObservaciones: "+observacion;
+        info += "Id: " + id;
+        info += "\nNombre del equipo: " + nombre_equipo;
+        info += "\nMarca del equipo: " + marca;
+        info += "\nModelo del equipo: " + modelo;
+        info += "\nUbicacion: " + ubicacion;
+        info += "\nEstatus del equipo: " + estatus;
         info += "\n------------------------------\n";
 
         return info;
     }
 
-    // CONSULTORES // GETTERS
+    // CONSULTORES
 
+    public Softgeb() {
+    }
+
+    public Softgeb(int id, String nombre_equipo, String marca, String modelo,
+            Ubicacion ubicacion, Estatus estatus) {
+        this.id = id;
+        this.nombre_equipo = nombre_equipo;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ubicacion = ubicacion;
+        this.estatus = estatus;
+    }
+
+    // GETTERS
     public int getId() {
         return id;
     }
@@ -64,16 +75,12 @@ public class Softgeb {
         return modelo;
     }
 
-    public String getUbicacion() {
+    public Ubicacion getUbicacion() {
         return ubicacion;
     }
 
-    public String getEstatus() {
+    public Estatus getEstatus() {
         return estatus;
-    }
-
-    public String getObservacion() {
-        return observacion;
     }
 
     // MODIFICADORES // SETTERS
@@ -90,15 +97,12 @@ public class Softgeb {
         this.modelo = modelo;
     }
 
-    public void setUbicacion(String ubicacion) {
+    public void setUbicacion(Ubicacion ubicacion) {
         this.ubicacion = ubicacion;
     }
 
-    public void setEstatus(String estatus) {
+    public void setEstatus(Estatus estatus) {
         this.estatus = estatus;
     }
 
-    public void setObservacion(String observacion) {
-        this.observacion = observacion;
-    }
 }

@@ -21,7 +21,6 @@ function show_equipos(equipos){
                 <td>${objEquipo.modelo}</td>
                 <td>${objEquipo.ubicacion}</td>
                 <td>${objEquipo.estatus}</td>
-                <td>${objEquipo.observacion}</td>
                 <td>
                     <button class="btn btn-warning" >Actualizar</button>
                     &nbsp;

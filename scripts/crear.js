@@ -5,8 +5,13 @@ function get_data_form(event) {
     const form = event.target
     const equipo = {
         nombre_equipo: form.nombre_equipo.value,
-
+        marca: form.marca.value,
+        modelo: form.modelo.value,
+        ubicacion: form.ubicacion.value,
+        estatus: form.estatus.value,
+        observacion: form.observacion.value
     }
+    create(mascota)
 }
 
 
