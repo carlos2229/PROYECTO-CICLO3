@@ -7,7 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.hibernate.softgeb.modelo.Estatus;
 import com.hibernate.softgeb.modelo.Softgeb;
+import com.hibernate.softgeb.modelo.Ubicacion;
 
 
 public class SoftgebService {
@@ -20,6 +22,8 @@ public class SoftgebService {
         factory = new Configuration()
         .configure("cfg.xml")
         .addAnnotatedClass(Softgeb.class)
+        .addAnnotatedClass(Ubicacion.class)
+        .addAnnotatedClass(Estatus.class)
         .buildSessionFactory();
     }
 
