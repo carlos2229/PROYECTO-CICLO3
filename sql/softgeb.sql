@@ -9,3 +9,6 @@ observacion TEXT NOT NULL
 );
 
 SELECT * FROM softgeb;
+
+INSERT INTO softgeb(nombre_equipo, marca, modelo, ubicacion, estatus, observacion)
+VALUES("Davincci", "ElectroBrain", "TXZR", "Amazonas", "Funcional", "ninguna");

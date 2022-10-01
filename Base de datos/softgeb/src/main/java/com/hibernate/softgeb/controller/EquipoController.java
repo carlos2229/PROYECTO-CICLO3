@@ -14,78 +14,76 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hibernate.softgeb.modelo.Softgeb;
-import com.hibernate.softgeb.services.SoftgebService;
+import com.hibernate.softgeb.modelo.EquipoModel;
+import com.hibernate.softgeb.services.EquipoService;
 
 @RestController
-@RequestMapping("/softgeb")
-public class SoftgebController {
+@RequestMapping("/equipos")
+public class EquipoController {
     
-    private SoftgebService  service;
+    private EquipoService service;
 
-    public SoftgebController() {
-        this.service = new SoftgebService();
+    public EquipoController() {
+        this.service = new EquipoService();
     }
 
     @GetMapping
     @CrossOrigin("*")
-    public List<Softgeb> listarEquipos() {
-        List<Softgeb> softgeb = new ArrayList<>();
+    public List<EquipoModel> listarEquipos() {
+        List<EquipoModel> equipos = new ArrayList<>();
         try {
-            softgeb = service.getList();
+            equipos = service.getList();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return softgeb;
+        return equipos;
     }
     @PostMapping
     @CrossOrigin("*")
-    public String crearEquipo(@RequestBody Softgeb softgeb) {
-        return service.create(softgeb);
+    public String crearEquipo(@RequestBody EquipoModel equipos) {
+        return service.create(equipos);
     }
 
     @GetMapping("/{id}")
     @CrossOrigin("*")
-    public Softgeb consultarEquipoXid(@PathVariable int id) {
-        Softgeb softgeb = new Softgeb();
+    public EquipoModel consultarEquipoXid(@PathVariable(name = "id") int id) {
+        EquipoModel equipos = new EquipoModel();
         try {
-            softgeb = service.readById(id);
+            equipos = service.readById(id);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return softgeb;
+        return equipos;
     }
 
     @GetMapping("/nombre")
     @CrossOrigin("*")
-    public List<Softgeb> consultarEquipoXnombre(@RequestParam String nombre_equipo) {
-        List<Softgeb> softgeb = new ArrayList<>();
+    public List<EquipoModel> consultarEquipoXnombre(@RequestParam String nombre_equipo) {
+        List<EquipoModel> equipos = new ArrayList<>();
         try {
-            softgeb = service.getByName(nombre_equipo);
+            equipos = service.getByName(nombre_equipo);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return softgeb;
+        return equipos;
     }
-
-   
 
     @PutMapping
     @CrossOrigin("*")
-    public String actualizarEquipo(@RequestBody Softgeb softgeb) {
+    public String actualizarEquipo(@RequestBody EquipoModel equipos) {
         String message = "";
         try {
-            service.update(softgeb);
+            service.update(equipos);
             message = "Los datos del equipo han sido actualizados con exito";
         } catch (Exception e) {
-            e.printStackTrace();
+            message = e.getMessage();
         }
         return message;
     }
 
     @DeleteMapping("/{id}")
     @CrossOrigin("*")
-    public String delete(@PathVariable int id) {
+    public String delete(@PathVariable(name = "id") int id) {
         return service.delete(id);
     }
 }

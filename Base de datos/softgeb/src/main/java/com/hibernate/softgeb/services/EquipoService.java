@@ -1,29 +1,27 @@
 package com.hibernate.softgeb.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.hibernate.softgeb.modelo.Estatus;
-import com.hibernate.softgeb.modelo.Softgeb;
-import com.hibernate.softgeb.modelo.Ubicacion;
+import com.hibernate.softgeb.modelo.EstatusModel;
+import com.hibernate.softgeb.modelo.EquipoModel;
+import com.hibernate.softgeb.modelo.UbicacionModel;
 
 
-public class SoftgebService {
+public class EquipoService {
 
     // ATRIBUTOS
     SessionFactory factory;
-    
-    public SoftgebService(){
+    public EquipoService(){
         // Crear objeto fabricante de sesiones
         factory = new Configuration()
         .configure("cfg.xml")
-        .addAnnotatedClass(Softgeb.class)
-        .addAnnotatedClass(Ubicacion.class)
-        .addAnnotatedClass(Estatus.class)
+        .addAnnotatedClass(EquipoModel.class)
+        .addAnnotatedClass(UbicacionModel.class)
+        .addAnnotatedClass(EstatusModel.class)
         .buildSessionFactory();
     }
 
@@ -32,8 +30,23 @@ public class SoftgebService {
         session.beginTransaction();
         return session;
     }
+    
+    public List<EquipoModel> getList() throws Exception {
+        Session session = createSession();
+        List<EquipoModel> equipos = session.createQuery("FROM EquipoModel", EquipoModel.class).list();
+        session.close();
+        return equipos;
+    }
 
-    public String create(Softgeb equipos) {
+    public EquipoModel readById(int idequipos) throws Exception {
+        Session session = createSession();
+        EquipoModel softgeb = session.find(EquipoModel.class, idequipos);
+        session.close();
+        return softgeb;
+    }
+
+    //Crear Equipo
+    public String create(EquipoModel equipos) {
         String message = "";
         Session session = createSession();
         try {
@@ -43,20 +56,15 @@ public class SoftgebService {
         } catch (Exception e) {
             message = e.getMessage();
         }
-    session.close();
-    return message;
-    }
-
-    public Softgeb readById(int idequipos) throws Exception {
-        Session session = createSession();
-        Softgeb softgeb = session.find(Softgeb.class, idequipos);
         session.close();
-        return softgeb;
+        return message;
     }
 
-    public List<Softgeb> getByName(String nombre_equipo) throws Exception {
+    
+
+    public List<EquipoModel> getByName(String nombre_equipo) throws Exception {
         Session session = createSession();
-        List<Softgeb> objSoftgebs = session.createQuery("FROM Softgeb WHERE nombre_equipo = :n", Softgeb.class)
+        List<EquipoModel> objSoftgebs = session.createQuery("FROM EquipoModel WHERE nombre_equipo = :n", EquipoModel.class)
         .setParameter("n", nombre_equipo).list();
         session.close();
         return objSoftgebs;
@@ -71,14 +79,8 @@ public class SoftgebService {
     //     return equipos;
     // }
 
-    public List<Softgeb> getList() throws Exception {
-        Session session = createSession();
-        List<Softgeb> equipos = session.createNativeQuery("selec * from equipos", Softgeb.class).list();
-        session.close();
-        return equipos;
-    }
 
-    public void update(Softgeb equipos) throws Exception {
+    public void update(EquipoModel equipos) throws Exception {
         Session session = createSession();
         // Actualizr objeto
         // Realizar actualización en la BD
@@ -90,12 +92,12 @@ public class SoftgebService {
 
     public String delete(int id) {
         Session session = createSession();
-        Softgeb equipos = session.find(Softgeb.class, id);
+        EquipoModel equipos = session.find(EquipoModel.class, id);
         deletService(equipos); 
         return "Equipo eliminado con exito";   
     }
 
-    public void deletService(Softgeb equipos) {
+    public void deletService(EquipoModel equipos) {
         Session session = createSession();
         //Eliminar
         session.remove(equipos);

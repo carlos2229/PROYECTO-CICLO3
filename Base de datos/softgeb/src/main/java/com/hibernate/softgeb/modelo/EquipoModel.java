@@ -4,12 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "equipos")
-public class Softgeb {
+public class EquipoModel {
 
     // ATRIBUTOS
     @Id
@@ -17,40 +16,21 @@ public class Softgeb {
     private String nombre_equipo;
     private String marca;
     private String modelo;
-
     @ManyToOne
     @JoinColumn(name = "id_ubicacion")
-   
-    private Ubicacion ubicacion_id_ubicacion;
-
+    private UbicacionModel ubicacion_id_ubicacion;
     @ManyToOne
     @JoinColumn(name = "id_estatus")
-    
-    private Estatus estatus_id_estatus;
+    private EstatusModel estatus_id_estatus;
 
     // CONSTRUCTORES
 
-    @Override
-    public String toString() {
-        String info = "------------------------------\n";
-        info += "Id: " + idequipos;
-        info += "\nNombre del equipo: " + nombre_equipo;
-        info += "\nMarca del equipo: " + marca;
-        info += "\nModelo del equipo: " + modelo;
-        info += "\nUbicacion: " + ubicacion_id_ubicacion;
-        info += "\nEstatus del equipo: " + estatus_id_estatus;
-        info += "\n------------------------------\n";
-
-        return info;
+    
+    public EquipoModel() {
     }
-
-    // CONSULTORES
-
-    public Softgeb() {
-    }
-
-    public Softgeb(int idequipos, String nombre_equipo, String marca, String modelo, Ubicacion ubicacion_id_ubicacion,
-            Estatus estatus_id_estatus) {
+    
+    public EquipoModel(int idequipos, String nombre_equipo, String marca, String modelo, UbicacionModel ubicacion_id_ubicacion,
+    EstatusModel estatus_id_estatus) {
         this.idequipos = idequipos;
         this.nombre_equipo = nombre_equipo;
         this.marca = marca;
@@ -58,6 +38,8 @@ public class Softgeb {
         this.ubicacion_id_ubicacion = ubicacion_id_ubicacion;
         this.estatus_id_estatus = estatus_id_estatus;
     }
+    
+    // CONSULTORES
 
     public int getId() {
         return idequipos;
@@ -91,20 +73,20 @@ public class Softgeb {
         this.modelo = modelo;
     }
 
-    public Ubicacion getUbicacion_id_ubicacion() {
+    public UbicacionModel getUbicacion_id_ubicacion() {
         return ubicacion_id_ubicacion;
     }
 
-    public void setUbicacion_id_ubicacion(Ubicacion ubicacion_id_ubicacion) {
+    public void setUbicacion_id_ubicacion(UbicacionModel ubicacion_id_ubicacion) {
         this.ubicacion_id_ubicacion = ubicacion_id_ubicacion;
     }
 
-    public Estatus getEstatus_id_estatus() {
+    public EstatusModel getEstatus_id_estatus() {
         return estatus_id_estatus;
     }
 
-    public void setEstatus_id_estatus(Estatus estatus_id_estatus) {
+    public void setEstatus_id_estatus(EstatusModel estatus_id_estatus) {
         this.estatus_id_estatus = estatus_id_estatus;
     }
 
-   }
+}

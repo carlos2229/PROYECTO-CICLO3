@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "ubicacion")
-public class Ubicacion {
+public class UbicacionModel {
     
     // ATRIBUTOS
 
@@ -15,12 +15,13 @@ public class Ubicacion {
     private String ubicacion;
 
     // CONSTRUCTORES
-    public Ubicacion(){}
-
-    public Ubicacion(int id_ubicacion, String ubicacion){
+    
+    public UbicacionModel(int id_ubicacion, String ubicacion){
         this.id_ubicacion = id_ubicacion;
         this.ubicacion = ubicacion;
     }
+    
+    public UbicacionModel(){}
 
     // GETTERS
     //CONSULTORES

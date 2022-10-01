@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "estatus")
-public class Estatus {
+public class EstatusModel {
 
     // ATRIBUTOS
 
@@ -15,13 +15,14 @@ public class Estatus {
     private String estatus;
 
     // CONSTRUCTORES
-    public Estatus() {}
-
-    public Estatus(int id_estatus, String estatus) {
+    
+    public EstatusModel(int id_estatus, String estatus) {
         this.id_estatus = id_estatus;
         this.estatus = estatus;
     }
-
+    
+    public EstatusModel() {}
+    
     // GETTERS
     // CONSULTORES
 
