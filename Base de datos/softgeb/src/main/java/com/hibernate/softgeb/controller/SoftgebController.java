@@ -27,6 +27,17 @@ public class SoftgebController {
         this.service = new SoftgebService();
     }
 
+    @GetMapping
+    @CrossOrigin("*")
+    public List<Softgeb> listarEquipos() {
+        List<Softgeb> softgeb = new ArrayList<>();
+        try {
+            softgeb = service.getList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return softgeb;
+    }
     @PostMapping
     @CrossOrigin("*")
     public String crearEquipo(@RequestBody Softgeb softgeb) {
@@ -35,7 +46,7 @@ public class SoftgebController {
 
     @GetMapping("/{id}")
     @CrossOrigin("*")
-    public Softgeb consultarEquipoXid(@PathVariable(name = "id") int id) {
+    public Softgeb consultarEquipoXid(@PathVariable int id) {
         Softgeb softgeb = new Softgeb();
         try {
             softgeb = service.readById(id);
@@ -57,17 +68,7 @@ public class SoftgebController {
         return softgeb;
     }
 
-    @GetMapping
-    @CrossOrigin("*")
-    public List<Softgeb> listarEquipos() {
-        List<Softgeb> softgeb = new ArrayList<>();
-        try {
-            softgeb = service.getList();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return softgeb;
-    }
+   
 
     @PutMapping
     @CrossOrigin("*")
@@ -84,7 +85,7 @@ public class SoftgebController {
 
     @DeleteMapping("/{id}")
     @CrossOrigin("*")
-    public String delete(@PathVariable(name = "id") int id) {
+    public String delete(@PathVariable int id) {
         return service.delete(id);
     }
 }

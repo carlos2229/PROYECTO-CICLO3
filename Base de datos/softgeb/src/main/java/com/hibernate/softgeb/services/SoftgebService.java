@@ -33,11 +33,11 @@ public class SoftgebService {
         return session;
     }
 
-    public String create(Softgeb softgeb) {
+    public String create(Softgeb equipos) {
         String message = "";
         Session session = createSession();
         try {
-            session.persist(softgeb);
+            session.persist(equipos);
             session.getTransaction().commit();
             message = "Equipo creado con exito";
         } catch (Exception e) {
@@ -47,9 +47,9 @@ public class SoftgebService {
     return message;
     }
 
-    public Softgeb readById(int id) throws Exception {
+    public Softgeb readById(int idequipos) throws Exception {
         Session session = createSession();
-        Softgeb softgeb = session.find(Softgeb.class, id);
+        Softgeb softgeb = session.find(Softgeb.class, idequipos);
         session.close();
         return softgeb;
     }
@@ -63,26 +63,26 @@ public class SoftgebService {
         // return mascotas;
     }
 
-    public List<String> objToString(List<Softgeb> objSoftgebs) {
-        List<String> softgeb = new ArrayList<>();
-        for(int i = 0; i < objSoftgebs.size(); i++) {
-            softgeb.add(objSoftgebs.get(i).toString());
-        }
-        return softgeb;
-    }
+    //  public List<String> objToString(List<Softgeb> objSoftgebs) {
+    //     List<String> equipos = new ArrayList<>();
+    //     for(int i = 0; i < objSoftgebs.size(); i++) {
+    //         equipos.add(objSoftgebs.get(i).toString());
+    //     }
+    //     return equipos;
+    // }
 
     public List<Softgeb> getList() throws Exception {
         Session session = createSession();
-        List<Softgeb> softgeb = session.createQuery("FROM Softgeb", Softgeb.class).list();
+        List<Softgeb> equipos = session.createNativeQuery("selec * from equipos", Softgeb.class).list();
         session.close();
-        return softgeb;
+        return equipos;
     }
 
-    public void update(Softgeb softgeb) throws Exception {
+    public void update(Softgeb equipos) throws Exception {
         Session session = createSession();
         // Actualizr objeto
         // Realizar actualización en la BD
-        session.merge(softgeb);
+        session.merge(equipos);
         session.getTransaction().commit();
         session.close();
             
@@ -90,15 +90,15 @@ public class SoftgebService {
 
     public String delete(int id) {
         Session session = createSession();
-        Softgeb softgeb = session.find(Softgeb.class, id);
-        deletService(softgeb); 
+        Softgeb equipos = session.find(Softgeb.class, id);
+        deletService(equipos); 
         return "Equipo eliminado con exito";   
     }
 
-    public void deletService(Softgeb softgeb) {
+    public void deletService(Softgeb equipos) {
         Session session = createSession();
         //Eliminar
-        session.remove(softgeb);
+        session.remove(equipos);
         session.getTransaction().commit();
     }
 
