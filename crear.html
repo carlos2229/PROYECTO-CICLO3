@@ -48,33 +48,34 @@
 				</div>
 
 				<!--Formulario-->
-				<form action="">
-						<div class="flex-form align-self-center m-auto p-5 bg-gradient">
+				<form class="flex-form align-self-center m-auto p-5 bg-gradient" onsubmit="get_data_form(event)">
 						<div class="mb-2">
 							<label for="nombre_equipo" class="form-label">Nombre del equipo</label>
-							<input type="text" class="form-control" id="nombre_equipo">
+							<input type="text" class="form-control" id="nombre_equipo" name="nombre_equipo">
 						</div>
 						<div class="mb-2">
 							<label for="marca" class="form-label">Marca</label>
-							<input type="text" class="form-control" id="marca">
+							<input type="text" class="form-control" id="marca" name="marca">
 						</div>
 						<div class="mb-2">
 							<label for="modelo" class="form-label">Modelo</label>
-							<input type="text" class="form-control" id="modelo">
+							<input type="text" class="form-control" id="modelo" name="modelo">
 						</div>
 						<div class="mb-2">
 							<label for="ubicacion" class="form-label">Ubicaión</label>
-							<input type="text" class="form-control" id="ubicacion">
+							<input type="number" class="form-control" id="ubicacion" name="ubicacion">
 						</div>
 						<label for="estatus" class="form-label">Estatus</label>
-						<select class="form-select" multiple >
+						<select type="number" class="form-select" multiple name="estatus">
 							<option value="1">1. Funcional</option>
 							<option value="2">2. Fuera de servicio</option>
 							<option value="3">3. En mantenimiento</option>
-							<option value="3">4. De baja</option>
+							<option value="4">4. De baja</option>
 						</select>
 						<div class="pt-2">
-							<button class="btn btn-primary">Crear</button>
+							<button type="submit" class="btn btn-primary" id="btn-crear">
+								Crear
+							</button>
 						</div>
 					</div>
 				</form>

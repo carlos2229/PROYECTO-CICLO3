@@ -17,10 +17,10 @@ public class EquipoModel {
     private String marca;
     private String modelo;
     @ManyToOne
-    @JoinColumn(name = "id_ubicacion")
+    @JoinColumn(name = "ubicacion_id_ubicacion")
     private UbicacionModel ubicacion_id_ubicacion;
     @ManyToOne
-    @JoinColumn(name = "id_estatus")
+    @JoinColumn(name = "estatus_id_estatus")
     private EstatusModel estatus_id_estatus;
 
     // CONSTRUCTORES

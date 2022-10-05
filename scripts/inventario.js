@@ -1,10 +1,10 @@
-const URL_API = "http://localhost:8080/softgeb"
+const URL_API = "http://localhost:8080/equipos"
 
 async function get_mascotas(){
     // ENVIAR SOLICITUD GET
     const respuesta = await fetch(URL_API)
-    const softgebs = await respuesta.json()
-    return softgebs
+    const equipos = await respuesta.json()
+    return equipos
 }
 
 function show_equipos(equipos){
@@ -19,8 +19,8 @@ function show_equipos(equipos){
                 <td>${objEquipo.nombre_equipo}</td>
                 <td>${objEquipo.marca}</td>
                 <td>${objEquipo.modelo}</td>
-                <td>${objEquipo.ubicacion}</td>
-                <td>${objEquipo.estatus}</td>
+                <td>${objEquipo.ubicacion_id_ubicacion.ubicacion}</td>
+                <td>${objEquipo.estatus_id_estatus.estatus}</td>
                 <td>
                     <button class="btn btn-warning" >Actualizar</button>
                     &nbsp;

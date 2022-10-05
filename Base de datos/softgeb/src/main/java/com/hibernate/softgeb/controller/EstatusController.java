@@ -40,13 +40,13 @@ public class EstatusController {
 
     @PostMapping
     @CrossOrigin("*")
-    public String crearEquipo(@RequestBody EstatusModel equipos) {
+    public String crearEstatus(@RequestBody EstatusModel equipos) {
         return service.create(equipos);
     }
 
     @PutMapping
     @CrossOrigin("*")
-    public String actualizarEquipo(@RequestBody EstatusModel equipos) {
+    public String actualizarEstatus(@RequestBody EstatusModel equipos) {
         String message = "";
         try {
             service.update(equipos);
